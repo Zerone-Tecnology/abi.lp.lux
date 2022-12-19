@@ -1,0 +1,111 @@
+@import "bourbon/bourbon"
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+body
+	font-family: "Gilroy", sans-serif
+	font-weight: 300
+	font-size: 17px
+	line-height: 20px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+h1
+	font-family: "Cochin", sans-serif
+	font-style: normal
+	font-weight: 700
+	font-size: 42px
+	line-height: 55px
+	color: #fff
+	text-transform: uppercase
+	span
+		color: #D5B77D
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+
+.header
+	background: linear-gradient(87.96deg, rgba(0, 0, 0, 0.43) 3.85%, rgba(0, 0, 0, 0) 93.41%),linear-gradient(180deg, rgba(0, 0, 0, 0.81) 8.33%, rgba(61, 56, 56, 0.75) 99.99%, #000000 100%),linear-gradient(99.9deg, rgba(0, 0, 0, 0.62) 13.04%, rgba(0, 0, 0, 0) 96.91%), url("../img/main_page_bg.png")
+	background-repeat: no-repeat 
+	background-position: center center 
+	background-attachment: fixed 
+	-webkit-background-size: cover 
+	-moz-background-size: cover 
+	-o-background-size: cover 
+	background-size: cover 
+	height: 1080px
+
+	.header_inner
+		display: flex
+		align-items: center
+		padding: 24px 0
+		justify-content: space-between
+		.nav
+			ul
+				list-style: none
+				display: flex
+				li
+					padding: 0 16px
+					a
+						color: #FFFFFF
+		.header_contact
+			a
+				color: #D5B77D
+				font-weight: 600
+				font-size: 20px
+				line-height: 142.8%
+				img
+					padding-right: 12px
+
+	.page_article
+		margin-top: 160px
+		p
+			font-weight: 300
+			font-size: 24px
+			line-height: 36px
+			color: #E9E9E9
+		.article_btn
+			font-weight: 300
+			font-size: 20px
+			line-height: 23px
+			color: #FFFFFF
+			background: linear-gradient(266.86deg, #DCBE81 -4.97%, rgba(180, 143, 106, 0.93) 106.56%)
+			border-radius: 25px
+			padding: 18px 40px 
+			border: 0
+			transition: all .3s ease
+			&:hover
+				opacity: 30%
+				transition: all .3s ease
