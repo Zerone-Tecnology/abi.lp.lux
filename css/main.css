@@ -1,5 +1,5 @@
 html.js .loader {
-  background: none repeat scroll 0 0 #ffffff;
+  background: none repeat scroll 0 0 #000;
   bottom: 0;
   height: 100%;
   left: 0;
@@ -10,13 +10,12 @@ html.js .loader {
   z-index: 9999;
 }
 html.js .loader .loader_inner {
-  background-image: url("../img/preloader.gif");
-  background-size: cover;
+  background: url("../img/preloader.gif");
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #fff;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   margin-top: -30px;
   margin-left: -30px;
   left: 50%;
@@ -48,6 +47,11 @@ h1 span {
   color: #D5B77D;
 }
 
+button {
+  border: 0;
+  background: transparent;
+}
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
   color: red;
@@ -66,7 +70,6 @@ body textarea:required:valid {
   background: linear-gradient(87.96deg, rgba(0, 0, 0, 0.43) 3.85%, rgba(0, 0, 0, 0) 93.41%), linear-gradient(180deg, rgba(0, 0, 0, 0.81) 8.33%, rgba(61, 56, 56, 0.75) 99.99%, #000000 100%), linear-gradient(99.9deg, rgba(0, 0, 0, 0.62) 13.04%, rgba(0, 0, 0, 0) 96.91%), url("../img/main_page_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   height: 1080px;
 }
@@ -85,6 +88,7 @@ body textarea:required:valid {
 }
 .header .header_inner .nav ul li a {
   color: #FFFFFF;
+  transition: all 0.3s ease;
 }
 .header .header_inner .header_contact a {
   color: #D5B77D;
@@ -103,6 +107,7 @@ body textarea:required:valid {
   font-size: 24px;
   line-height: 36px;
   color: #E9E9E9;
+  margin-bottom: 44px;
 }
 .header .page_article .article_btn {
   font-weight: 300;
@@ -118,4 +123,133 @@ body textarea:required:valid {
 .header .page_article .article_btn:hover {
   opacity: 30%;
   transition: all 0.3s ease;
+}
+.header .company_features {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+}
+.header .company_features .features_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 42px;
+}
+.header .company_features .features_block h5 {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 142.8%;
+  margin: 0;
+  color: rgba(213, 183, 125, 0.6);
+  font-style: normal;
+}
+.header .company_features .features_block p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 142.8%;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+section {
+  transition: all 0.3s ease;
+}
+section .card_title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  border-bottom: 2px solid #B48F6A;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .card {
+  display: flex;
+  margin-top: 30px;
+}
+section .card > div {
+  border: 2px solid #B48F6A;
+  width: 50%;
+}
+section .card .card_img img {
+  width: -webkit-fill-available;
+}
+section .card .card_text {
+  padding: 44px 36px;
+}
+section .card .card_text h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  color: #0D0D0D;
+}
+section .card .card_text p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #0D0D0D;
+  margin: 0;
+}
+section .card .card_text .card_description {
+  margin-top: 40px;
+}
+section .card .card_text .card_description p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #7B7B7B;
+}
+section .card .card_text .card_description h4 {
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 12px;
+}
+section .card .card_text .card_description .description_ellipse {
+  display: flex;
+  align-items: center;
+}
+section .show_more_btn {
+  color: #A1662B;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  border: 1px solid #B48F6A;
+  border-radius: 8px;
+  padding: 16px 57px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .carousel .carousel-inner .item img {
+  margin: auto;
+}
+section .carousel .carousel-inner .item .carousel-caption {
+  position: relative;
+  right: 0;
+  left: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+  margin-top: 20px;
+}
+section .carousel .carousel-inner .item .carousel-caption p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #7B7B7B;
+}
+section .carousel .carousel-control {
+  background: transparent;
+}
+section .carousel .carousel-control .glyphicon {
+  border: 1px solid #B48F6A;
+  border-radius: 36px;
+  width: 45px;
+  height: 45px;
 }/*# sourceMappingURL=main.css.map */

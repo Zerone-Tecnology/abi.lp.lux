@@ -1,7 +1,7 @@
 @import "bourbon/bourbon"
 
 html.js .loader
-	background: none repeat scroll 0 0 #ffffff
+	background: none repeat scroll 0 0 #000
 	bottom: 0
 	height: 100%
 	left: 0
@@ -11,13 +11,13 @@ html.js .loader
 	width: 100%
 	z-index: 9999
 	.loader_inner
-		background-image: url("../img/preloader.gif")
-		background-size: cover
+		background: url("../img/preloader.gif")
+		background-size: auto
 		background-repeat: no-repeat
 		background-position: center center
-		background-color: #fff
-		height: 60px
-		width: 60px
+		// background-color: #fff
+		height: 100px
+		width: 100px
 		margin-top: -30px
 		margin-left: -30px
 		left: 50%
@@ -43,7 +43,9 @@ h1
 	text-transform: uppercase
 	span
 		color: #D5B77D
-
+button
+	border: 0
+	background:	transparent
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -60,7 +62,6 @@ body textarea:required:valid
 	background: linear-gradient(87.96deg, rgba(0, 0, 0, 0.43) 3.85%, rgba(0, 0, 0, 0) 93.41%),linear-gradient(180deg, rgba(0, 0, 0, 0.81) 8.33%, rgba(61, 56, 56, 0.75) 99.99%, #000000 100%),linear-gradient(99.9deg, rgba(0, 0, 0, 0.62) 13.04%, rgba(0, 0, 0, 0) 96.91%), url("../img/main_page_bg.png")
 	background-repeat: no-repeat 
 	background-position: center center 
-	background-attachment: fixed 
 	-webkit-background-size: cover 
 	-moz-background-size: cover 
 	-o-background-size: cover 
@@ -80,6 +81,7 @@ body textarea:required:valid
 					padding: 0 16px
 					a
 						color: #FFFFFF
+						transition: all .3s ease
 		.header_contact
 			a
 				color: #D5B77D
@@ -96,6 +98,8 @@ body textarea:required:valid
 			font-size: 24px
 			line-height: 36px
 			color: #E9E9E9
+			margin-bottom: 44px
+
 		.article_btn
 			font-weight: 300
 			font-size: 20px
@@ -109,3 +113,115 @@ body textarea:required:valid
 			&:hover
 				opacity: 30%
 				transition: all .3s ease
+	.company_features
+		display: flex
+		justify-content: flex-end
+		margin-top: 80px
+
+		.features_block
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 0 42px
+			h5
+				font-family: "Playfair Display"
+				font-weight: 900
+				font-size: 60px
+				line-height: 142.8%
+				margin: 0
+				color: rgba(213, 183, 125, 0.6)
+				font-style: normal
+			p
+				font-weight: 400
+				font-size: 24px
+				line-height: 142.8%
+				color: rgba(255, 255, 255, 0.5)
+				margin: 0
+section
+	transition: all .3s ease
+	.card_title
+		font-weight: 500
+		font-size: 40px
+		line-height: 47px
+		border-bottom: 2px solid #B48F6A
+		text-align: center
+		width: fit-content
+		margin-left: auto
+		margin-right: auto
+	.card
+		display: flex
+		margin-top: 30px 
+		&>div
+			border: 2px solid #B48F6A
+			width: 50%
+		.card_img
+			img
+				width: -webkit-fill-available
+		.card_text
+			padding: 44px 36px
+			h3
+				font-weight: 600
+				font-size: 30px
+				line-height: 36px
+				margin: 0
+				color: #0D0D0D
+			p
+				font-weight: 500
+				font-size: 24px
+				line-height: 28px
+				color: #0D0D0D
+				margin: 0
+
+			.card_description
+				margin-top: 40px
+				p
+					font-weight: 500
+					font-size: 22px
+					line-height: 26px
+					color: #7B7B7B
+
+				h4
+					margin: 0 20px
+					font-weight: 600
+					font-size: 24px
+					line-height: 29px
+					margin-top: 12px 
+				.description_ellipse
+					display: flex
+					align-items: center
+	.show_more_btn
+		color: #A1662B
+		font-weight: 300
+		font-size: 20px
+		line-height: 23px
+		border: 1px solid #B48F6A
+		border-radius: 8px
+		padding: 16px 57px
+		margin: 40px auto
+		display: flex
+		flex-direction: column
+		align-items: center
+	.carousel
+		.carousel-inner
+			.item
+				img
+					margin: auto
+				.carousel-caption
+					position: relative
+					right:0
+					left: 0
+					text-shadow: 0 1px 2px rgb(0 0 0 / 0%)
+					margin-top: 20px 
+					p
+						font-weight: 500
+						font-size: 22px
+						line-height: 26px
+						color: #7B7B7B
+
+		.carousel-control
+			background: transparent
+			.glyphicon
+				border: 1px solid #B48F6A
+				border-radius: 36px
+				width: 45px
+				height: 45px

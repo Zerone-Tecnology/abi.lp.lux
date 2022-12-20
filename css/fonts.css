@@ -15,4 +15,10 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/Cochin/Cochin.eot?#iefix") format("embedded-opentype"), url("../fonts/Cochin/Cochin.woff") format("woff"), url("../fonts/Cochin/Cochin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.eot?#iefix") format("embedded-opentype"), url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff"), url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
 }/*# sourceMappingURL=fonts.css.map */
