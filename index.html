@@ -21,16 +21,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="libs/animate/animate.css">
+
+	<link rel="stylesheet" href="libs/owlcarousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owlcarousel/dist/assets/owl.theme.default.min.css">
 
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
 	<script src="libs/modernizr/modernizr.js"></script>
-
 </head>
 
 <body>
@@ -43,10 +44,10 @@
 				</div>
 				<nav class="nav">
 					<ul>
-						<li><a href="#s1">Портфолио</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Оставьте заявку</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a class="nav_a" href="#s1">Портфолио</a></li>
+						<li><a class="nav_a" href="#">Отзывы</a></li>
+						<li><a class="nav_a" href="#">Оставьте заявку</a></li>
+						<li><a class="nav_a" href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header_contact">
@@ -57,7 +58,7 @@
 				<h1><span>Эксклюзивный ремонт</span> <br>квартир, домов и коммерческих <br>помещений <span>под
 						ключ</span></h1>
 				<p>Оставь заявку сегодня и получи бесплатный<br> замер обьекта через 2 часа!</p>
-				<button class="article_btn">Рассчитать смету</button>
+				<button class="default_btn">Рассчитать смету</button>
 			</div>
 			<div class="company_features">
 				<div class="features_block">
@@ -80,7 +81,11 @@
 			<h2 class="card_title">Наше портфолио</h2>
 			<div class="card">
 				<div class="card_img">
-					<img src="img/first_card_img.png" alt="">
+					<div class="card-carousel owl-carousel owl-theme">
+						<div class="item"><img src="img/first_card_img.png" alt=""></div>
+						<div class="item"><img src="img/first_card_img.png" alt=""></div>
+						<div class="item"><img src="img/first_card_img.png" alt=""></div>
+					</div>
 				</div>
 				<div class="card_text">
 					<h3>Диазйн-проект</h3>
@@ -133,12 +138,20 @@
 					</div>
 				</div>
 				<div class="card_img">
-					<img src="img/seconde_card_img.png" alt="">
+					<div class="card-carousel owl-carousel owl-theme">
+						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
+						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
+						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
+					</div>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card_img">
-					<img src="img/third_card_img.png" alt="">
+					<div class="card-carousel owl-carousel owl-theme">
+						<div class="item"><img src="img/third_card_img.png" alt=""></div>
+						<div class="item"><img src="img/third_card_img.png" alt=""></div>
+						<div class="item"><img src="img/third_card_img.png" alt=""></div>
+					</div>
 				</div>
 				<div class="card_text">
 					<h3>Диазйн-проект</h3>
@@ -171,37 +184,58 @@
 	<section class="section_2">
 		<div class="container">
 			<h2 class="card_title">Наше портфолио</h2>
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="img/carousel_img.png" alt="...">
-						<div class="carousel-caption">
-							<p>Ремонт для семьи Ивановых</p>
-						  </div>
-
-					</div>
-					<div class="item">
-						<img src="img/carousel_img.png" alt="...">
-					</div>
-				</div>
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+			<div id="owl-portfolio" class="owl-carousel owl-theme">
+				<div class="item"><img src="img/carousel_img.png" alt=""></div>
+				<div class="item"><img src="img/carousel_img.png" alt=""></div>
+				<div class="item"><img src="img/carousel_img.png" alt=""></div>
 			</div>
 		</div>
 	</section>
-	<section class="mailing">
-		<div class="container">
-			<h3>Оставьте заявку и наши специалисты<br> обязательно с вами свяжутся</h3>
+	<section class="mailing_section">
+		<div class="container">			
+			<div class="mailing">
+				<h3>Оставьте заявку и наши специалисты<br> обязательно с вами свяжутся</h3>
+				<div class="mailing_inputs">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Номер телефона" id="imask_phone_number" value="+7(7">
+				</div>
+				<button class="default_btn">Жду звонка</button>
+			</div>
 		</div>
 	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer_up">
+				<div class="logo">
+					<img src="img/logo.png" alt="">
+				</div>
+				<div class="footer_address">
+					<h6>Наш адрес</h6>
+					<p>г. Алматы <br>
+						ул. Желтоксан 118 <br>
+						офис №318</p>
+				</div>
+				<div class="footer_contact">
+					<h6>Контакты</h6>
+					<a href="tel:+ 7 727  364 9357">+ 7 727  364 9357</a>
+					<a href="tel:+ 7 707  818 3480">+ 7 707  818 3480</a>
+				</div>
+				<div class="footer_email">
+					<h6>Почта</h6>
+					<a href="mailto:a.altynbekova@abigroup.kz">a.altynbekova@abigroup.kz</a>
+				</div>
+				<div class="footer_network">
+					<h6>Социальные сети</h6>
+					<a href="#" class="instagram"><img src="img/Instagram_icon.png" alt=""></a>
+					<a href="#" class="facebook"><img src="img/Facebook_icon.png" alt=""></a>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<p>Разработка сайта — <a href="#">Zerone Technology</a></p>
+				<p>Разработка сайта — Zerone Technology</p>
+			</div>
+		</div>
+	</footer>
 
 	<div class="hidden"></div>
 
@@ -217,13 +251,21 @@
 	<![endif]-->
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/owlcarousel/dist/owl.carousel.js"></script>
+
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
-	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="libs/owlcarousel/dis/vendors/highlight.js"></script>
+	<script src="libs/owlcarousel/assets/js/app.js"></script>
+
+	<script src="libs/imask/imask.js"></script>
 
 
 	<script src="js/common.js"></script>
+	<script src="js/main.js"></script>
+
 
 </body>
 

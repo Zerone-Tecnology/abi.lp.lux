@@ -34,6 +34,10 @@ body {
   overflow-x: hidden;
 }
 
+a, p {
+  color: white;
+}
+
 h1 {
   font-family: "Cochin", sans-serif;
   font-style: normal;
@@ -45,6 +49,14 @@ h1 {
 }
 h1 span {
   color: #D5B77D;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 138.3%;
+  color: #B48F6A;
+  margin: 16px 0;
 }
 
 button {
@@ -64,6 +76,24 @@ body textarea:required:valid {
 
 .hidden {
   display: none;
+}
+
+.default_btn {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  background: linear-gradient(266.86deg, #DCBE81 -4.97%, rgba(180, 143, 106, 0.93) 106.56%);
+  border-radius: 15px;
+  padding: 18px 40px;
+  border: 0;
+  border: 1px #DCBE81 solid;
+  transition: all 0.3s ease;
+}
+.default_btn:hover {
+  color: #DCBE81;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .header {
@@ -109,21 +139,6 @@ body textarea:required:valid {
   color: #E9E9E9;
   margin-bottom: 44px;
 }
-.header .page_article .article_btn {
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 23px;
-  color: #FFFFFF;
-  background: linear-gradient(266.86deg, #DCBE81 -4.97%, rgba(180, 143, 106, 0.93) 106.56%);
-  border-radius: 25px;
-  padding: 18px 40px;
-  border: 0;
-  transition: all 0.3s ease;
-}
-.header .page_article .article_btn:hover {
-  opacity: 30%;
-  transition: all 0.3s ease;
-}
 .header .company_features {
   display: flex;
   justify-content: flex-end;
@@ -154,6 +169,7 @@ body textarea:required:valid {
 
 section {
   transition: all 0.3s ease;
+  margin-top: 80px;
 }
 section .card_title {
   font-weight: 500;
@@ -228,28 +244,113 @@ section .show_more_btn {
   flex-direction: column;
   align-items: center;
 }
-section .carousel .carousel-inner .item img {
-  margin: auto;
+section #owl-portfolio .owl-nav button {
+  padding: 1% 1.7% !important;
 }
-section .carousel .carousel-inner .item .carousel-caption {
-  position: relative;
-  right: 0;
-  left: 0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0);
-  margin-top: 20px;
+section .owl-carousel .owl-dots {
+  display: none;
 }
-section .carousel .carousel-inner .item .carousel-caption p {
+section .owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+}
+section .owl-carousel .owl-nav button {
+  border: 1px solid #B48F6A !important;
+  border-radius: 36px !important;
+  padding: 1% 2.5% !important;
+  height: -webkit-fill-available;
+  transition: all 0.3s ease;
+}
+section .owl-carousel .owl-nav button:hover {
+  background: linear-gradient(266.86deg, #DCBE81 -4.97%, rgba(180, 143, 106, 0.93) 106.56%) !important;
+  transition: all 0.3s ease;
+}
+section .mailing {
+  border: 3px solid #B48F6A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .mailing h3 {
+  color: #6A3908;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
-  color: #7B7B7B;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  margin: 36px 0;
 }
-section .carousel .carousel-control {
-  background: transparent;
+section .mailing .default_btn {
+  margin: 30px 0;
 }
-section .carousel .carousel-control .glyphicon {
+section .mailing .mailing_inputs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+section .mailing .mailing_inputs input {
+  max-width: 404px;
+  max-height: 60px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #B48F6A;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  outline: none;
+}
+section .mailing .mailing_inputs input:first-child {
+  margin-right: 30px;
+}
+section .mailing .mailing_inputs input::-moz-placeholder {
+  color: #C0BDBD;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+section .mailing .mailing_inputs input:-ms-input-placeholder {
+  color: #C0BDBD;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+section .mailing .mailing_inputs input::placeholder {
+  color: #C0BDBD;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+footer {
+  background: #121112;
+  margin-top: 120px;
+  padding-top: 52px;
+}
+footer .footer_up {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 65px;
+  border-bottom: 1px solid #D5B77D;
+}
+footer .footer_up .footer_contact {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_up .footer_network .instagram {
+  margin-right: 16px;
+}
+footer .footer_up .footer_network a {
+  padding: 14px 9px;
+  background: #B48F6A;
   border-radius: 36px;
-  width: 45px;
-  height: 45px;
+}
+footer .footer_bottom {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

@@ -8,17 +8,11 @@
   font-family: "Gilroy";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Gilroy/Gilroy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy.woff") format("woff"), url("../fonts/Gilroy/Gilroy.ttf") format("truetype");
+  src: url("../fonts/Gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Cochin";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Cochin/Cochin.eot?#iefix") format("embedded-opentype"), url("../fonts/Cochin/Cochin.woff") format("woff"), url("../fonts/Cochin/Cochin.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Playfair Display";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.eot?#iefix") format("embedded-opentype"), url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff") format("woff"), url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/Cochin/Cochin.eot?#iefix") format("embedded-opentype"), url("../fonts/Cochin/Cochin.woff2") format("woff2"), url("../fonts/Cochin/Cochin.woff") format("woff"), url("../fonts/Cochin/Cochin.ttf") format("truetype");
 }/*# sourceMappingURL=fonts.css.map */
