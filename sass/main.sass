@@ -67,11 +67,12 @@ body
 		font-weight: 400
 		font-size: 14px
 		line-height: 138.3%
-
+body[data-aos-duration="400"] [data-aos] #page_acticle_h1
+	transition-duration: 1s
 a,p
 	color: white
 h1
-	font-family: "Cochin", sans-serif
+	font-family: "Cochin", serif
 	font-style: normal
 	font-weight: 700
 	font-size: 42px
@@ -93,7 +94,8 @@ h6
 button
 	border: 0
 	background:	transparent
-
+.carousel_img
+	cursor: pointer
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: red
@@ -121,9 +123,8 @@ body textarea:required:valid
 		font-size: 14px
 		line-height: 16px
 	&:hover
-		color: #DCBE81
-		background: transparent
-		cursor: url("../img/black_finger_hover.png"),auto
+		color: #B48F6A
+		background: #fff
 		transition: all .3s ease
 .mobile_nav
 	height: 320px
@@ -228,6 +229,11 @@ input
 					top: -400%    				
 					flex-direction: column    				
 					left: 0
+				.header_networks
+					display: none
+					float: right
+					@include respond-to(_991)
+						display: block
 				li
 					padding: 0 16px
 					@include respond-to(_991)       
@@ -237,6 +243,15 @@ input
 							color: #6A3908
 						color: #FFFFFF
 						transition: all .3s ease
+					&.networks
+						width: webkit-fill-available
+						float: right
+						a
+							padding: 14px 9px
+							border: 2px solid #6A3908
+							border-radius: 36px
+							&:first-child
+								margin-right: 16px
 		.header_contact
 			@include respond-to(_991)
 				position: absolute
@@ -262,9 +277,6 @@ input
 		@include respond-to(_991)    
 			margin-top: 60px
 			padding-bottom: 33px
-		.default_btn
-			&:hover
-				cursor: url("../img/white_finger_btn.png"), auto
 		p
 			font-weight: 300
 			font-size: 24px
@@ -345,7 +357,7 @@ section
 			&:nth-child(odd)
 				flex-direction: column
 
-		&>divx
+		&>div
 			border: 2px solid #B48F6A
 			width: 50%
 			@include respond-to(_991)
@@ -439,7 +451,6 @@ section
 			background: linear-gradient(266.86deg, #DCBE81 -4.97%, rgba(180, 143, 106, 0.93) 106.56%)
 			color: white
 			transition: all .3s ease
-			cursor: url("../img/black_finger_hover.png"),auto
 			transition: all .3s ease
 	.owl-carousel
 		.owl-dots
@@ -496,8 +507,9 @@ section
 					max-width: 100%
 				&:first-child
 					margin-right: 30px 
-					@include respond-to(_991)
-					margin-right: 0
+				@include respond-to(_991)
+					&:first-child
+						margin-right: 0
 			@include respond-to(_991)
 				height: 100%
 				flex-direction: column
@@ -547,72 +559,64 @@ footer
 
 
 
-.smeta_modal_overlay
-	display: none
-	position: fixed    
-	z-index: 10000   
-	left: 0    
-	top: 0    
-	width: 100%    
-	height: 100%    
-	background: rgba(0, 0, 0, 0.7)    
-	text-align: center
-	.smeta_modal_form
-		background: #fff
-		max-width: 650px
-		margin: 0 auto
-		padding: 36px 74px 24px 74px
-		border-radius: 8px
-		margin-top: 220px 
-		position: relative
-		@include respond-to(_675)
-			margin: 0 16px
-			margin-top: 175px
-			padding: 38px 12px
-		.checkbox
-			display: flex
-			align-items: center
-			input[type='checkbox']
-				margin: 0
-				width: auto
-				width: 29px
-				height: 29px
-				margin-right: 12px
-				accent-color: #fff
-				border: 1px solid #B48F6A
-				&:checked
-					border: 1px solid #B48F6A
-			p
-				color: #000000
-				font-weight: 500
-				font-size: 16px
-				line-height: 138.3%
-		.default_btn
-			width: -webkit-fill-available
-			margin: 12px 0
-		input
-			margin-bottom: 20px
-			max-width: -webkit-fill-available
-		h5
-			font-weight: 500
-			font-size: 28px
-			line-height: 40px
-			color: #6A3908
+.smeta_modal_form
+	background: #fff
+	max-width: 650px
+	margin: 0 auto
+	padding: 36px 74px 24px 74px
+	border-radius: 8px
+	// margin-top: 220px 
+	position: relative
+	@include respond-to(_675)
+		margin: 0 16px
+		margin-top: 175px
+		padding: 38px 12px
+	.checkbox
+		display: flex
+		align-items: center
+		input[type='checkbox']
 			margin: 0
-			margin-bottom: 36px
-			@include respond-to(_675)
-				font-weight: 600
-				font-size: 22px
-				line-height: 24px
-		.close_modal
-			position: absolute
-			top: 16px
-			right: 20px
-			@include respond-to(_675)
-				top: 12px
-				right: 12px
-			button
-				transition: all .5s ease
-				&:hover
-					transform: rotate(180deg)
-					transition: all .5s ease
+			width: auto
+			width: 29px
+			height: 29px
+			margin-right: 12px
+			accent-color: #fff
+			border: 1px solid #B48F6A
+			&:checked
+				border: 1px solid #B48F6A
+		p
+			color: #000000
+			font-weight: 500
+			font-size: 16px
+			line-height: 138.3%
+	.default_btn
+		width: -webkit-fill-available
+		margin: 12px 0
+	input
+		margin-bottom: 20px
+		max-width: -webkit-fill-available
+	h5
+		font-weight: 500
+		font-size: 28px
+		line-height: 40px
+		color: #6A3908
+		margin: 0
+		margin-bottom: 36px
+		@include respond-to(_675)
+			font-weight: 600
+			font-size: 22px
+			line-height: 24px
+	.mfp-close
+		position: absolute
+		top: 16px
+		right: 20px
+		font-size: 46px
+		transition: all .5s ease
+		&:hover
+			transform: rotate(180deg)
+			transition: all .5s ease
+
+		@include respond-to(_675)
+			top: 12px
+			right: 12px
+

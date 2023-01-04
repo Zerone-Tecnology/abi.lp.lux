@@ -20,6 +20,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 
 	<link rel="stylesheet" href="libs/animate/animate.css">
@@ -31,6 +33,10 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+
+
+
 	<script src="libs/modernizr/modernizr.js"></script>
 </head>
 
@@ -39,7 +45,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="header_inner">
-				<div class="logo_wrap">
+				<div class="logo_wrap" data-aos="fade-right">
 					<a href="/"><img src="img/logo.png" alt=""></a>
 				</div>
 				<nav class="nav">
@@ -49,51 +55,56 @@
                         </div>
 						<div class="menu_close_btn" id="menu_close_btn"><button><img src="img/close_modal.png" alt=""></button></div>
                     </div>
-					<ul id="menu">
+					<ul id="menu" data-aos="fade-down" data-aos-delay="200">
 						<li><a class="nav_a" href="#s1">Портфолио</a></li>
 						<li><a class="nav_a" href="#">Отзывы</a></li>
 						<li><a class="nav_a" href="#">Оставьте заявку</a></li>
 						<li><a class="nav_a" href="#">Контакты</a></li>
+						<li class="header_networks">
+							<a href="#" class="instagram"><img src="img/header_Instagram_icon.png" alt=""></a>
+							<a href="#2" class="facebook"><img src="img/header_Facebook_icon.png" alt=""></a>
+						</li>
+						<!-- <li class="networks"><a href="#" class="facebook"><img src="img/header_Facebook_icon.png" alt=""></a></li> -->
 					</ul>
 				</nav>
-				<div class="header_contact">
+				<div class="header_contact" data-aos="fade-left" data-aos-delay="200">
 					<a href="tel:+77078183480"><img src="img/phone_icon.png" alt="">+7 707 818 34 80</a>
 				</div>
 			</div>
 			<div class="page_article">
-				<h1><span>Эксклюзивный ремонт</span> <br>квартир, домов и коммерческих <br>помещений <span>под
+				<h1 id="page_acticle_h1" data-aos="fade-right" data-aos-delay="300"><span>Эксклюзивный ремонт</span> <br>квартир, домов и коммерческих <br>помещений <span>под
 						ключ</span></h1>
-				<p>Оставь заявку сегодня и получи бесплатный<br> замер обьекта через 2 часа!</p>
-				<button class="default_btn" id="rashitat_smetu">Рассчитать смету</button>
+				<p data-aos="fade-right" data-aos-delay="500">Оставь заявку сегодня и получи бесплатный<br> замер обьекта через 2 часа!</p>
+				<button class="default_btn" id="rashitat_smetu" data-aos="zoom-in-up" data-aos-delay="400" data-effect="flipInX">Рассчитать смету</button>
 			</div>
 			<div class="company_features">
-				<div class="features_block">
-					<h5>9</h5>
+				<div class="features_block" data-aos="fade-up" data-aos-delay="500" id="shiva">
+					<h5 class="count">9</h5>
 					<p>лет на рынке</p>
 				</div>
-				<div class="features_block">
-					<h5>500</h5>
+				<div class="features_block" data-aos="fade-up" data-aos-delay="700" id="shiva">
+					<h5 class="count">500</h5>
 					<p>успешных проектов</p>
 				</div>
-				<div class="features_block">
-					<h5>15</h5>
-					<p>опытных мастеров </p>
+				<div class="features_block" data-aos="fade-up" data-aos-delay="900" id="shiva">
+					<h5 class="count">15</h5>
+					<p data-aos="fade-left" >опытных мастеров </p>
 				</div>
 			</div>
 		</div>
 	</header>
 	<section class="section_1" id="s1">
 		<div class="container">
-			<h2 class="card_title">Наше портфолио</h2>
+			<h2 class="card_title" data-aos="zoom-in-up">Наше портфолио</h2>
 			<div class="card">
-				<div class="card_img">
+				<div class="card_img" data-aos="fade-right">
 					<div class="card-carousel owl-carousel owl-theme">
-						<div class="item"><img src="img/first_card_img.png" alt=""></div>
-						<div class="item"><img src="img/first_card_img.png" alt=""></div>
-						<div class="item"><img src="img/first_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/first_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/first_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/first_card_img.png" alt=""></div>
 					</div>
 				</div>
-				<div class="card_text">
+				<div class="card_text" data-aos="fade-left">
 					<h3>Диазйн-проект</h3>
 					<p>для квартиры в ЖК "Dostyk Residence” </p>
 					<div class="card_description">
@@ -119,7 +130,7 @@
 				</div>
 			</div>
 			<div class="card">
-				<div class="card_text">
+				<div class="card_text" data-aos="fade-right">
 					<h3>Диазйн-проект</h3>
 					<p>для квартиры в ЖК "Dostyk Residence” </p>
 					<div class="card_description">
@@ -143,23 +154,23 @@
 						</span>
 					</div>
 				</div>
-				<div class="card_img">
+				<div class="card_img" data-aos="fade-left">
 					<div class="card-carousel owl-carousel owl-theme">
-						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
-						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
-						<div class="item"><img src="img/seconde_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/seconde_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/seconde_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/seconde_card_img.png" alt=""></div>
 					</div>
 				</div>
 			</div>
 			<div class="card">
-				<div class="card_img">
+				<div class="card_img" data-aos="fade-right">
 					<div class="card-carousel owl-carousel owl-theme">
-						<div class="item"><img src="img/third_card_img.png" alt=""></div>
-						<div class="item"><img src="img/third_card_img.png" alt=""></div>
-						<div class="item"><img src="img/third_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/third_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/third_card_img.png" alt=""></div>
+						<div class="item"><img class="carousel_img" src="img/third_card_img.png" alt=""></div>
 					</div>
 				</div>
-				<div class="card_text">
+				<div class="card_text" data-aos="fade-left">
 					<h3>Диазйн-проект</h3>
 					<p>для квартиры в ЖК "Dostyk Residence” </p>
 					<div class="card_description">
@@ -184,22 +195,22 @@
 					</div>
 				</div>
 			</div>
-			<button class="show_more_btn">Показать еще</button>
+			<button class="show_more_btn" data-aos="zoom-in-up">Показать еще</button>
 		</div>
 	</section>
 	<section class="section_2">
 		<div class="container">
-			<h2 class="card_title">Видео-отзывы о реализованных проектах </h2>
-			<div id="owl-portfolio" class="owl-carousel owl-theme">
-				<div class="item"><img src="img/carousel_img.png" alt=""></div>
-				<div class="item"><img src="img/carousel_img.png" alt=""></div>
-				<div class="item"><img src="img/carousel_img.png" alt=""></div>
+			<h2 class="card_title" data-aos="zoom-in-up">Видео-отзывы о реализованных проектах </h2>
+			<div id="owl-portfolio" class="owl-carousel owl-theme" data-aos="fade-left">
+				<div class="item"><img class="carousel_img" src="img/carousel_img.png" alt=""></div>
+				<div class="item"><img class="carousel_img" src="img/carousel_img.png" alt=""></div>
+				<div class="item"><img class="carousel_img" src="img/carousel_img.png" alt=""></div>
 			</div>
 		</div>
 	</section>
 	<section class="mailing_section">
 		<div class="container">			
-			<div class="mailing">
+			<div class="mailing" data-aos="fade-right">
 				<h3>Оставьте заявку и наши специалисты<br> обязательно с вами свяжутся</h3>
 				<div class="mailing_inputs">
 					<input type="text" placeholder="Имя">
@@ -209,7 +220,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer" data-aos="zoom-in-up">
 		<div class="container">
 			<div class="footer_up">
 				<div class="footer_logo">
@@ -246,7 +257,7 @@
 	</footer>
 
 
-	<div class="smeta_modal_overlay" id="smeta_modal_overlay">
+	<!-- <div class="smeta_modal_overlay" id="smeta_modal_overlay">
 		<div class="smeta_modal_form">
 			<h5>Оставьте заявку и получи <br>бесплатный выезд и замер объекта <br>уже сегодня</h5>
 			<input type="text" placeholder="Имя">
@@ -259,7 +270,7 @@
 				<button><img src="img/close_modal.png" alt=""></button>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="hidden"></div>
 
 	<div class="loader">
@@ -272,8 +283,10 @@
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+
 	<script src="libs/owlcarousel/dist/owl.carousel.js"></script>
 
 	<script src="libs/waypoints/waypoints.min.js"></script>
@@ -284,6 +297,8 @@
 	<script src="libs/owlcarousel/assets/js/app.js"></script>
 
 	<script src="libs/imask/imask.js"></script>
+
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 
 
 	<script src="js/common.js"></script>
